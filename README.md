@@ -1,3 +1,3 @@
 # NextBase
 
-# A Next.js and Firebase starter
+A Next.js and Firebase starter.
