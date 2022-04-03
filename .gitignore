@@ -19,7 +19,7 @@ typings/
 /public/sw.js
 /public/workbox*.js
 /public/robots.txt
-/public/sitemap.xml
+/public/sitemap*
 
 # misc
 .DS_Store
