@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Installing the dependencies
-        run: npm ci --silent
-      - name: Next.js build
-        run: npm run build
+        run: yarn install
+      - name: Next.js & server build
+        run: yarn build
       - name: Install firebase tools
         run: sudo npm i -g firebase-tools
       - name: Deploy to Firebase
