@@ -1,21 +1,20 @@
 import { ToastProvider } from 'react-toast-notifications';
+import { usePerformance } from 'src/firebase/performance';
+import { useAnalytics } from 'src/firebase/analytics';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import nProgress from 'nprogress';
 import 'tailwindcss/tailwind.css';
 import { useEffect } from 'react';
 import 'nprogress/nprogress.css';
-import firebase from 'cloud';
-import 'styles/global.scss';
+import 'src/styles/global.scss';
 
 function App({ Component, pageProps }: AppProps) {
   const { events } = useRouter();
-  useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') {
-      firebase.analytics();
-      firebase.performance();
-    }
-  }, []);
+
+  useAnalytics();
+  usePerformance();
+
   useEffect(() => {
     const startProgress = () => {
       nProgress.start();
