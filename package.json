@@ -13,7 +13,8 @@
     "build:cloud": "tsc --build server.tsconfig.json",
     "build": "yarn build:next && yarn build:cloud",
     "postbuild": "next-sitemap",
-    "serve": "firebase serve"
+    "serve": "firebase serve",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -46,6 +47,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^7.0.4",
     "next-sitemap": "^2.5.17",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
