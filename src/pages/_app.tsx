@@ -26,6 +26,7 @@ function App({ Component, pageProps }: AppProps) {
     events.on('routeChangeError', stopProgress);
     events.on('routeChangeComplete', stopProgress);
   }, []);
+
   return (
     <ToastProvider placement='bottom-center' autoDismiss>
       <Component {...pageProps} />
